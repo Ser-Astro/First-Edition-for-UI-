@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Snap AAC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="bar">
+  <div id="msg" aria-live="polite"></div>
+  <button id="speak" class="act">Speak</button>
+  <button id="del" class="act">Delete</button>
+  <button id="clear" class="act">Clear</button>
+</header>
+<nav id="tools">
+  <button id="home">Home</button>
+  <button id="up">Back</button>
+  <button id="kbtn" aria-pressed="false">Keyboard</button>
+  <input id="q" type="search" placeholder="Search symbols" aria-label="Search symbols">
+  <select id="lang" aria-label="Language"><option value="en">English</option><option value="fr">Français</option></select>
+  <label>Size <input id="size" type="range" min="90" max="210" value="130"></label>
+  <label><input id="txt" type="checkbox" checked> Labels</label>
+  <label><input id="tap" type="checkbox"> Speak on tap</label>
+</nav>
+<div id="core" aria-label="Core words"></div>
+<div id="crumb"></div>
+<main id="grid"></main>
+<section id="kb" hidden aria-label="Keyboard">
+  <output id="draft"></output>
+  <div id="pred" aria-label="Word suggestions"></div>
+  <div id="keys"></div>
+</section>
+<script type="module" src="app.js"></script>
+</body>
+</html>
